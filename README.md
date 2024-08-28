@@ -2,7 +2,7 @@
 Marler Müll App Eine APP die den Müllkalender und viele Infos rund um den Müll zeigt
 
 ##
-in der nahen Zukunft wird die App viele neue Funktionalitäten erhalten. Beginnend mit Login und Reigstermenü
+in der nahen Zukunft wird die App viele neue Funktionalitäten erhalten. Beginnend mit Login und Registriermenü
 
 ###
 
