@@ -1,4 +1,5 @@
 import "dart:io";
+import "functions.dart";
 
 void main() {
   // Hier wird der User begrüßt
@@ -32,9 +33,24 @@ void main() {
           case "S":
             stdout.writeln("Jetzt sind Sie beim  Service ");
           case "R":
-            stdout.writeln("Hier bekommen Sie Infos über die Tonenarten ");
+            stdout.writeln(
+                "Welche Tonne wollen Sie sehen? \n [G]elb \n [S]chwarz \ [B]raun \ [BL]au");
+            // Hier wird auf die Functionen gesprungen
+            String colortrash = stdin.readLineSync()!;
+            switch (colortrash) {
+              case "G":
+                trashcoloryellow();
+              case "S":
+                trashcolorblack();
+              case "B":
+                trashcolorbrown();
+              case "BL":
+                trashcolorblue()  
+            }
         }
       }
+
+    // noch im oberen switch
     case "R":
       stdout.writeln("Hier gehts zur Registrierung");
     case "G":
