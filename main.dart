@@ -34,7 +34,7 @@ void main() {
             stdout.writeln("Jetzt sind Sie beim  Service ");
           case "R":
             stdout.writeln(
-                "Welche Tonne wollen Sie sehen? \n [G]elb \n [S]chwarz \ [B]raun \ [BL]au");
+                "Welche Tonne wollen Sie sehen? \n [G]elb \n [S]chwarz \n [B]raun \n [BL]au");
             // Hier wird auf die Functionen gesprungen
             String colortrash = stdin.readLineSync()!;
             switch (colortrash) {
@@ -45,7 +45,7 @@ void main() {
               case "B":
                 trashcolorbrown();
               case "BL":
-                trashcolorblue()  
+                trashcolorblue();
             }
         }
       }
