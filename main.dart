@@ -1,1 +1,30 @@
-void main() {}
+import "dart:html_common";
+import "dart:io";
+
+void main() {
+  // Hier wird der User begrüßt
+  stdout.writeln(" Herzlich Willkomen zur Marler Müll App");
+  stdout.writeln(" Sie haben die Wahl. Was möchten Sie tun? \n ");
+  // Erste Auswahl
+  stdout.writeln(
+      "Wählen Sie (L) für Login , (R) für Register , (G) als Gast beitreten;");
+
+  String choice = stdin.readLineSync()!;
+  switch (choice) {
+    case "L":
+      stdout.writeln(" Bitte geben Sie Username ein");
+      String testUserName = "Dirk";
+      String username = stdin.readLineSync()!;
+      stdout.writeln(" Bitte geben Sie Password ein");
+      String testUserPass = "0000";
+      String userPassInput = stdin.readLineSync()!;
+// Abfrage wenn alles korrekt Weiterleitung zu changescreen
+      if (username == testUserName && userPassInput == testUserPass) {
+        stdout.writeln(
+            "Was möchten sie tun?\n [K]Kalender \n [ABC]Abfall-ABC \n [N]News \n [S]Service \n [R]Recycle");
+      }
+  }
+
+  //case "R":
+  //stdout.writeln("Hier gehts zur Registrierung");
+}
