@@ -1,4 +1,3 @@
-import "dart:html_common";
 import "dart:io";
 
 void main() {
@@ -22,9 +21,23 @@ void main() {
       if (username == testUserName && userPassInput == testUserPass) {
         stdout.writeln(
             "Was möchten sie tun?\n [K]Kalender \n [ABC]Abfall-ABC \n [N]News \n [S]Service \n [R]Recycle");
+        String userChange = stdin.readLineSync()!;
+        switch (userChange) {
+          case "K":
+            stdout.writeln("Jetzt sind Sie auf dem Kalender ");
+          case "ABC":
+            stdout.writeln("Jetzt sind Sie auf dem ABfall ABC ");
+          case "N":
+            stdout.writeln("Hier finden Sie die News ");
+          case "S":
+            stdout.writeln("Jetzt sind Sie beim  Service ");
+          case "R":
+            stdout.writeln("Hier bekommen Sie Infos über die Tonenarten ");
+        }
       }
+    case "R":
+      stdout.writeln("Hier gehts zur Registrierung");
+    case "G":
+      stdout.writeln("Als Gast haben Sie nicht alle Vorteile");
   }
-
-  //case "R":
-  //stdout.writeln("Hier gehts zur Registrierung");
 }
