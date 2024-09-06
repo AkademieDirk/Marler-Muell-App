@@ -1,7 +1,19 @@
 import "dart:io";
-import "functions.dart";
+import "Klassen/class_garbagecancolor.dart";
+import "functions/functions.dart";
 
 void main() {
+// Hier werden die Objekte zu GarbageCanColors erstellt
+
+  Garbagecancolor yellowcan = Garbagecancolor("yellow",
+      "Hier steht der Text für die gelbe Tonne", "Hier erscheint das Bild");
+  Garbagecancolor bluecan =
+      Garbagecancolor("blue", "Text für die blue Tonne", "Bild bleue Tonne");
+  Garbagecancolor blackcan =
+      Garbagecancolor("black", "Text schwarze Tonne", "Bild schwarze Tonne");
+  Garbagecancolor browncan = Garbagecancolor(
+      "brown", "Text für die braune Tonne", "Bild für die braune Tonne");
+
   // Hier wird der User begrüßt
   stdout.writeln(" Herzlich Willkomen zur Marler Müll App");
   stdout.writeln(" Sie haben die Wahl. Was möchten Sie tun? \n ");
@@ -39,13 +51,13 @@ void main() {
             String colortrash = stdin.readLineSync()!;
             switch (colortrash) {
               case "G":
-                trashcoloryellow();
+                yellowcan.showColorContents();
               case "S":
-                trashcolorblack();
+                bluecan.showColorContents();
               case "B":
-                trashcolorbrown();
+                yellowcan.showColorContents();
               case "BL":
-                trashcolorblue();
+                browncan.showColorContents();
             }
         }
       }
